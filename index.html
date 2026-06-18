@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIGymBro - Real-Time AI Pose Coach & Posture Tracker</title>
+  <meta name="description" content="AIGymBro is a premium mobile application that corrects your posture and counts reps in real-time using local MoveNet algorithms on your device.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" id="logoLink">
+        <img src="assets/new_logo.svg" alt="AIGymBro Logo" class="logo-img">
+        <span class="logo-text">AIGymBro</span>
+      </a>
+      <button class="nav-toggle" id="mobileToggle" aria-label="Navigation menu">☰</button>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#trophies">Trophy Room</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="#hero" class="cta-btn" id="navCta">Download Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="section-label">THE FUTURE OF FITNESS</span>
+        <h1>Your Personal <span>AI Pose Coach</span>, Always in Your Pocket.</h1>
+        <p>AIGymBro analyzes your movements in real-time, counts your reps with clinical precision, and warns you instantly if your form breaks. All processed locally on-device to ensure your total privacy.</p>
+        
+        <div class="hero-download-row">
+          <a href="#" class="download-badge" id="appStoreHeroBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: var(--primary-accent)">
+              <path d="M18.71,19.5C17.88,20.74,17,21.95,15.66,22c-1.31,0-1.72-.8-3.22-.8s-2,.78-3.25,.82c-1.31,0-2.26-1.17-3.11-2.39C4.3,17.41,3,12.78,4.78,9.75c.89-1.5,2.45-2.45,4.16-2.48,1.3-.02,2.53,.88,3.33,.88s2.25-1.1,3.8-1c.65,.03,2.47,.26,3.64,1.98-.09,.06-2.17,1.28-2.15,3.81,.02,3,2.65,4,2.68,4.03-.03,.07-.42,1.44-1.38,2.83M15.97,4.17c.66-.81,1.11-1.93,.99-3.06-1,.04-2.18,.67-2.9,1.5-.63,.72-1.18,1.86-1.03,2.97,1.1,.09,2.23-.6,2.94-1.41Z"/>
+            </svg>
+            <div class="badge-text">
+              <span>Download on the</span>
+              <span>App Store</span>
+            </div>
+          </a>
+          <a href="#" class="download-badge" id="googlePlayHeroBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: var(--secondary-accent)">
+              <path d="M3,5.27V18.73L16.55,12L3,5.27M17.87,11.33L19.46,12.12L17.87,12.92L16.55,12L17.87,11.33M4.25,4.1L16.85,10.37L15.37,11.12L4.25,4.1M4.25,19.9L15.37,12.88L16.85,13.63L4.25,19.9Z"/>
+            </svg>
+            <div class="badge-text">
+              <span>Get it on</span>
+              <span>Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="device-preview">
+        <div class="device-glow"></div>
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <video class="phone-video" autoplay loop muted playsinline id="demoVideo">
+              <source src="assets/animation.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Core Capabilities</span>
+        <h2 class="section-title">Engineered to elevate your form.</h2>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card" id="featPose">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3>AI Pose Coaching</h3>
+          <p>Local intelligence tracks up to 17 joints in real-time. It monitors body angles for Squats, Push-ups, Lunges, and more, offering visual feedback to help you refine your posture.</p>
+        </div>
+        
+        <div class="feature-card" id="featPrivacy">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 00-2 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+          </div>
+          <h3>100% Offline Privacy</h3>
+          <p>All math calculations occur locally on your device via MoveNet and WebGL. No video feed or biological biometric metrics ever leave your phone or get stored on remote servers.</p>
+        </div>
+
+        <div class="feature-card" id="featCircuits">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3 3L22 4" />
+            </svg>
+          </div>
+          <h3>Workout Circuit Loops</h3>
+          <p>Choose from preset templates like "Cardio Blast" or "Steel Legs" with smart timers, or build your own custom circuit by checking exercises together.</p>
+        </div>
+
+        <div class="feature-card" id="featMuscleMap">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+          </div>
+          <h3>Interactive Muscle Map</h3>
+          <p>A beautifully rendered anatomical model visualizes your training load. Muscles light up and shift opacity depending on your total sets volume saved locally.</p>
+        </div>
+
+        <div class="feature-card" id="featGamification">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5a2 2 0 10-2 2h2zm0 0h4l1 3H7l1-3h4z" />
+            </svg>
+          </div>
+          <h3>Level Up & XP Rewards</h3>
+          <p>Earn XP points for every rep. Level up and check your status on the dashboard. Save and share premium summary templates containing workout analytics.</p>
+        </div>
+
+        <div class="feature-card" id="featStreak">
+          <div class="feature-icon-box">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+          </div>
+          <h3>Streak Notifications</h3>
+          <p>Set a custom hour slot during onboarding to receive localized notifications. Lock streak milestones and never miss a workout day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trophies Section -->
+  <section class="trophies" id="trophies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Gamified Fitness</span>
+        <h2 class="section-title">Train. Unlock. Level Up.</h2>
+      </div>
+      
+      <div class="trophies-grid">
+        <div class="trophy-card" id="trophyWood">
+          <div class="trophy-img-wrap">
+            <div class="trophy-glow" style="background: radial-gradient(circle, #B45309 0%, transparent 70%);"></div>
+            <img src="assets/trophy/rank_1.png" alt="Wood Trophy" class="trophy-img">
+          </div>
+          <span class="trophy-tier" style="color: #D97706;">Wood Tier</span>
+          <h4>Initiate Warrior</h4>
+          <p>The starting block. Take your first steps, align your smartphone, and complete your initial pose-coached reps.</p>
+        </div>
+
+        <div class="trophy-card" id="trophyBronze">
+          <div class="trophy-img-wrap">
+            <div class="trophy-glow" style="background: radial-gradient(circle, #CD7F32 0%, transparent 70%);"></div>
+            <img src="assets/trophy/rank_2.png" alt="Bronze Trophy" class="trophy-img">
+          </div>
+          <span class="trophy-tier" style="color: #CD7F32;">Bronze Tier</span>
+          <h4>Bronze Challenger</h4>
+          <p>Unlocks when completing 10 full workout sessions. You are building muscle memory and learning the fundamentals.</p>
+        </div>
+
+        <div class="trophy-card" id="trophySilver">
+          <div class="trophy-img-wrap">
+            <div class="trophy-glow" style="background: radial-gradient(circle, #C0C0C0 0%, transparent 70%);"></div>
+            <img src="assets/trophy/rank_3.png" alt="Silver Trophy" class="trophy-img">
+          </div>
+          <span class="trophy-tier" style="color: #D5D8DC;">Silver Tier</span>
+          <h4>Silver Warrior</h4>
+          <p>Conquer 50 sets with a perfect posture check. The AI recognizes your consistency and form correction progress.</p>
+        </div>
+
+        <div class="trophy-card" id="trophyGold">
+          <div class="trophy-img-wrap">
+            <div class="trophy-glow" style="background: radial-gradient(circle, #FFD700 0%, transparent 70%);"></div>
+            <img src="assets/trophy/rank_4.png" alt="Gold Trophy" class="trophy-img">
+          </div>
+          <span class="trophy-tier" style="color: #F4D03F;">Gold Tier</span>
+          <h4>Gold Champion</h4>
+          <p>Achieve a 15-day streak of consecutive workouts. You have formed a powerful habit and your posture is immaculate.</p>
+        </div>
+
+        <div class="trophy-card" id="trophyPlatinum">
+          <div class="trophy-img-wrap">
+            <div class="trophy-glow" style="background: radial-gradient(circle, #86C5DA 0%, transparent 70%);"></div>
+            <img src="assets/trophy/rank_5.png" alt="Platinum Trophy" class="trophy-img">
+          </div>
+          <span class="trophy-tier" style="color: #86C5DA;">Platinum Master</span>
+          <h4>Platinum Master</h4>
+          <p>Unlocks at 500 completed circuit routines. You are now pushing the boundaries of local Pose Coaching.</p>
+        </div>
+
+        <div class="trophy-card" id="trophyDiamond">
+          <div class="trophy-img-wrap">
+            <div class="trophy-glow" style="background: radial-gradient(circle, #38BDF8 0%, transparent 70%);"></div>
+            <img src="assets/trophy/rank_6.png" alt="Diamond Trophy" class="trophy-img">
+          </div>
+          <span class="trophy-tier" style="color: #38BDF8;">Diamond Tier</span>
+          <h4>Diamond Legend</h4>
+          <p>Complete 5,000 reps across all exercises. The ultimate milestone representing absolute mechanical perfection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="index.html" class="logo-link" id="footerLogo">
+          <img src="assets/new_logo.svg" alt="AIGymBro Logo" class="logo-img">
+          <span class="logo-text">AIGymBro</span>
+        </a>
+        <p>AIGymBro is the local, smart trainer that respects your privacy and corrects your form in real-time.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#trophies">Trophy Room</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AIGymBro. All rights reserved.</p>
+      <p>Developed with dedication to physical privacy and health.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

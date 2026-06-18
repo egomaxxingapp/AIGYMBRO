@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - AIGymBro</title>
+  <meta name="description" content="AIGymBro Privacy Policy. Learn how we ensure absolute physical data privacy by processing posture checks 100% locally on your smartphone.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" id="logoLink">
+        <img src="assets/new_logo.svg" alt="AIGymBro Logo" class="logo-img">
+        <span class="logo-text">AIGymBro</span>
+      </a>
+      <button class="nav-toggle" id="mobileToggle" aria-label="Navigation menu">☰</button>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#trophies">Trophy Room</a></li>
+          <li><a href="privacy.html" class="active">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="index.html#hero" class="cta-btn" id="navCta">Download Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Legal Content -->
+  <main class="legal-page">
+    <div class="container legal-content">
+      <h1>Privacy Policy</h1>
+      <p class="last-updated">Last Updated: June 18, 2026</p>
+      
+      <div class="legal-text">
+        <p>Your privacy is absolute. AIGymBro is engineered from the ground up on one core principle: **no video data ever leaves your device**.</p>
+        
+        <h2>1. Camera & Video Data Processing</h2>
+        <p>To analyze your posture and count reps in real-time, AIGymBro requires access to your device's camera.</p>
+        <ul>
+          <li>Pose analysis runs entirely in memory (RAM) using the **MoveNet** (TensorFlow.js) model.</li>
+          <li>The camera feed is processed locally on your phone's GPU (WebGL) and is never recorded, saved, or uploaded to any server.</li>
+          <li>As soon as you finish your set or close the app, all processing terminates immediately.</li>
+        </ul>
+
+        <h2>2. Health Data Sinc (Apple HealthKit)</h2>
+        <p>AIGymBro integrates with Apple HealthKit on iOS to read and display your daily step counts on the dashboard.</p>
+        <ul>
+          <li>Access to your health data only occurs if you explicitly grant permission.</li>
+          <li>Steps are fetched locally and displayed inside the app. No step data or biological metrics are ever uploaded, synced, or shared with third parties.</li>
+          <li>You can disable HealthKit permissions at any time via your iOS Settings app.</li>
+        </ul>
+
+        <h2>3. Local Storage</h2>
+        <p>Your workout history, trophy counts, weight goal logs, and onboarding parameters are stored locally on your device using **AsyncStorage**.</p>
+        <ul>
+          <li>These stats are saved on your phone and are not uploaded to our cloud databases.</li>
+          <li>You can purge all stored logs at any time by clicking "Delete All Data" inside the Profile settings panel.</li>
+        </ul>
+
+        <h2>4. Policy Updates</h2>
+        <p>We may modify this Privacy Policy to align with new legal requirements or SDK updates. We will notify you of any changes by updating the timestamp at the top.</p>
+
+        <h2>5. Contact Us</h2>
+        <p>If you have any questions regarding your privacy, contact us at: `privacy@aigymbro.com`.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="index.html" class="logo-link" id="footerLogo">
+          <img src="assets/new_logo.svg" alt="AIGymBro Logo" class="logo-img">
+          <span class="logo-text">AIGymBro</span>
+        </a>
+        <p>AIGymBro is the local, smart trainer that respects your privacy and corrects your form in real-time.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#trophies">Trophy Room</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AIGymBro. All rights reserved.</p>
+      <p>Developed with dedication to physical privacy and health.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
