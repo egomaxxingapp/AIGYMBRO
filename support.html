@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support & Help - AIGymBro</title>
+  <meta name="description" content="AIGymBro Support and Help Center. Find answers to FAQs, troubleshoot posture tracking issues, or contact our support team.">
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Support Page Specific Layout */
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      margin-top: 40px;
+    }
+    .support-form-container {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 40px;
+    }
+    .support-form-container h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 24px;
+      color: #FFF;
+    }
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .form-input {
+      background-color: rgba(5, 5, 8, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      color: var(--text-color);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      transition: border-color 0.25s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--primary-accent);
+    }
+    .form-input::placeholder {
+      color: rgba(255, 255, 255, 0.25);
+    }
+    .form-submit-btn {
+      width: 100%;
+      background: linear-gradient(135deg, var(--primary-accent) 0%, #FF6B35 100%);
+      color: #050508;
+      border: none;
+      padding: 14px;
+      border-radius: 12px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 4px 15px rgba(251, 146, 60, 0.2);
+    }
+    .form-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(251, 146, 60, 0.35);
+    }
+    .faq-accordion {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .faq-item {
+      background: rgba(255, 255, 255, 0.01);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: border-color 0.3s ease;
+    }
+    .faq-item:hover {
+      border-color: rgba(251, 146, 60, 0.15);
+    }
+    .faq-question {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #FFF;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .faq-question::before {
+      content: '❓';
+      font-size: 0.95rem;
+    }
+    .faq-answer {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 245, 155, 0.05);
+      border: 1px solid rgba(0, 245, 155, 0.2);
+      color: var(--secondary-accent);
+      border-radius: 12px;
+      font-weight: 500;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 992px) {
+      .support-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link" id="logoLink">
+        <img src="assets/new_logo.svg" alt="AIGymBro Logo" class="logo-img">
+        <span class="logo-text">AIGymBro</span>
+      </a>
+      <button class="nav-toggle" id="mobileToggle" aria-label="Navigation menu">☰</button>
+      <nav id="navMenu">
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#trophies">Trophy Room</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+          <li><a href="support.html" class="active">Support</a></li>
+          <li><a href="index.html#hero" class="cta-btn" id="navCta">Download Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="legal-page">
+    <div class="container legal-content">
+      <h1>Support Center</h1>
+      <p class="last-updated">We're here to help you train better, safer, and with total data privacy.</p>
+      
+      <div class="support-grid">
+        <!-- FAQ Section -->
+        <div class="faq-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-accordion">
+            <div class="faq-item">
+              <div class="faq-question">Why isn't the app counting my reps?</div>
+              <div class="faq-answer">
+                Ensure you are positioned about 2 meters away from the camera so your entire body (head to toes) is visible. Keep the room well-lit and try to wear form-fitting clothes so the MoveNet algorithm can track your joint centers correctly.
+              </div>
+            </div>
+            
+            <div class="faq-item">
+              <div class="faq-question">Is my video feed stored or uploaded?</div>
+              <div class="faq-answer">
+                No, never. Form tracking and joint angle checks are processed 100% locally on your smartphone. The camera feed is analyzed in RAM and discarded instantly.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">How do I connect Apple HealthKit?</div>
+              <div class="faq-answer">
+                During onboarding, you will be prompted to link HealthKit. If you skipped this step, go to your iPhone's **Settings app > Health > Data Access & Devices > AIGymBro** and enable the requested permissions.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">How do I manage my Pro subscription?</div>
+              <div class="faq-answer">
+                Go to the **Profile** tab in the app, open **Settings** (gear icon) and select **Manage Subscription**. Alternatively, you can manage it directly through your Apple App Store or Google Play Store subscription settings.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Support Form -->
+        <div class="support-form-container">
+          <h3>Open a Support Ticket</h3>
+          <form id="supportForm" onsubmit="event.preventDefault(); document.getElementById('successMsg').style.display = 'block'; document.getElementById('supportForm').reset();">
+            <div class="form-group">
+              <label for="supportName">Full Name</label>
+              <input type="text" id="supportName" class="form-input" placeholder="e.g. John Doe" required>
+            </div>
+
+            <div class="form-group">
+              <label for="supportEmail">Email Address</label>
+              <input type="email" id="supportEmail" class="form-input" placeholder="e.g. john@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="supportId">Support ID (Optional)</label>
+              <input type="text" id="supportId" class="form-input" placeholder="Found in App Profile > Settings">
+            </div>
+
+            <div class="form-group">
+              <label for="supportMessage">Describe your issue</label>
+              <textarea id="supportMessage" class="form-input" rows="5" placeholder="Please describe what's happening..." required></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn">Send Message</button>
+            <div class="success-message" id="successMsg">
+              ✓ Ticket received! We'll reply within 24 hours.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-info">
+        <a href="index.html" class="logo-link" id="footerLogo">
+          <img src="assets/new_logo.svg" alt="AIGymBro Logo" class="logo-img">
+          <span class="logo-text">AIGymBro</span>
+        </a>
+        <p>AIGymBro is the local, smart trainer that respects your privacy and corrects your form in real-time.</p>
+      </div>
+      <div class="footer-links">
+        <h5>Navigation</h5>
+        <ul>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#trophies">Trophy Room</a></li>
+          <li><a href="support.html">Support Center</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 AIGymBro. All rights reserved.</p>
+      <p>Developed with dedication to physical privacy and health.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
